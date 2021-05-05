@@ -104,5 +104,50 @@ namespace Uebung
             txtInOut.Text = string.Empty;
             res = string.Empty;
         }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            int zahl;
+            List<int> numbers = new List<int>();
+            List<string> operators = new List<string>();
+
+            string[] read = txtCalcRes.Text.ToString().Split(' ');
+
+            foreach (string item in read)
+            {
+                if (int.TryParse(item, out zahl))
+                {
+                    numbers.Add(zahl);
+                }
+                else
+                {
+                    operators.Add(item);
+                }
+
+            }
+
+            int erg = numbers[0];
+            for (int i =1; i<numbers.Count; i++)
+            {
+                switch (operators[i-1])
+                {
+                    case "+":
+                        erg += numbers[i];
+                        break;
+                    case "-":
+                        erg -= numbers[i];
+                        break;
+                    default:
+                        erg=-99;
+                        break;
+                }
+                if (erg == -99)
+                    break;
+            }
+
+            txtCalcRes.Text = erg==-99 ? "ERROR" : erg.ToString();
+
+        }
     }
+    
 }

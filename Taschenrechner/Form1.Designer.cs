@@ -34,6 +34,8 @@ namespace Uebung
             this.btnSub = new System.Windows.Forms.Button();
             this.btnRes = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnCalc = new System.Windows.Forms.Button();
+            this.txtCalcRes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtInOut
@@ -48,7 +50,7 @@ namespace Uebung
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.Location = new System.Drawing.Point(12, 132);
+            this.btnAdd.Location = new System.Drawing.Point(12, 133);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(43, 41);
             this.btnAdd.TabIndex = 1;
@@ -59,7 +61,7 @@ namespace Uebung
             // btnSub
             // 
             this.btnSub.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSub.Location = new System.Drawing.Point(115, 132);
+            this.btnSub.Location = new System.Drawing.Point(115, 133);
             this.btnSub.Name = "btnSub";
             this.btnSub.Size = new System.Drawing.Size(43, 41);
             this.btnSub.TabIndex = 2;
@@ -70,7 +72,7 @@ namespace Uebung
             // btnRes
             // 
             this.btnRes.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRes.Location = new System.Drawing.Point(218, 132);
+            this.btnRes.Location = new System.Drawing.Point(218, 133);
             this.btnRes.Name = "btnRes";
             this.btnRes.Size = new System.Drawing.Size(43, 41);
             this.btnRes.TabIndex = 3;
@@ -81,7 +83,7 @@ namespace Uebung
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.Location = new System.Drawing.Point(12, 72);
+            this.btnClear.Location = new System.Drawing.Point(12, 73);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(43, 41);
             this.btnClear.TabIndex = 4;
@@ -89,11 +91,31 @@ namespace Uebung
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnCalc
+            // 
+            this.btnCalc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCalc.Location = new System.Drawing.Point(12, 243);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(249, 41);
+            this.btnCalc.TabIndex = 5;
+            this.btnCalc.Text = "berechne";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
+            // txtCalcRes
+            // 
+            this.txtCalcRes.Location = new System.Drawing.Point(12, 214);
+            this.txtCalcRes.Name = "txtCalcRes";
+            this.txtCalcRes.Size = new System.Drawing.Size(249, 23);
+            this.txtCalcRes.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 185);
+            this.ClientSize = new System.Drawing.Size(273, 293);
+            this.Controls.Add(this.txtCalcRes);
+            this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRes);
             this.Controls.Add(this.btnSub);
@@ -113,6 +135,8 @@ namespace Uebung
         private System.Windows.Forms.Button btnSub;
         private System.Windows.Forms.Button btnRes;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnCalc;
+        private System.Windows.Forms.TextBox txtCalcRes;
     }
 }
 
