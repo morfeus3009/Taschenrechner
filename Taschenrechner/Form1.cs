@@ -103,6 +103,7 @@ namespace Uebung
             operation = null;
             txtInOut.Text = string.Empty;
             res = string.Empty;
+            txtCalcRes.Text = string.Empty;
         }
 
         private void btnCalc_Click(object sender, EventArgs e)
